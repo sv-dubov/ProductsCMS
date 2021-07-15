@@ -50,6 +50,24 @@ function ses_destroy()
     }
 }
 
+//Determining the page name in the tab header
+function page_name()
+{
+    $page_name = $_POST['link'];
+    if (($page_name == '') || ($page_name == 'home')) {
+        $page_name = 'Home';
+    } elseif ($page_name === 'info') {
+        $page_name = 'Info';
+    } elseif ($page_name === 'contacts') {
+        $page_name = 'Contacts';
+    } elseif ($page_name === 'goods') {
+        $page_name = 'Goods';
+    } elseif ($page_name === 'profile') {
+        $page_name = 'Profile';
+    }
+    return $page_name;
+}
+
 //Determining the UA name of the month
 function month_ua($month)
 {
