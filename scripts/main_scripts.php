@@ -10,7 +10,7 @@ function verify_user($user_data)
     return $fold_path;
 }
 
-//Path checker function to further generate a complete relative path from the current directory
+//Path checker to further generate a complete relative path from current directory
 function verify_path()
 {
     if ($_SERVER['REQUEST_URI'] === '/') {
@@ -67,5 +67,3 @@ function month_ua($month)
     elseif ($month === 'December') $month = 'Грудня';
     return $month;
 }
-
-?>
